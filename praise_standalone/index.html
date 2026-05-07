@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What People Say About Working With Theresa</title>
+<style>
+:root {
+  --bg: #faf8f4;
+  --text: #1a1a1a;
+  --muted: #6b6560;
+  --border: #d8d3cc;
+  --accent: #2a2520;
+  --quote-bg: #f2efea;
+  --slack-bg: #ffffff;
+  --slack-border: #e0dbd4;
+  --badge-bg: #e8e4dd;
+  --section-bg: transparent;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page {
+  max-width: 740px;
+  margin: 0 auto;
+  padding: 60px 24px 100px;
+}
+
+/* HEADER */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 40px;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+h1 {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: clamp(28px, 5vw, 42px);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-bottom: 20px;
+  color: var(--accent);
+}
+
+.intro {
+  font-size: 17px;
+  color: var(--muted);
+  margin-bottom: 40px;
+  max-width: 600px;
+}
+.intro strong { color: var(--text); font-weight: 600; }
+
+hr.rule {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 0 0 48px;
+}
+
+/* SECTIONS */
+.section {
+  margin-bottom: 52px;
+}
+.section-heading {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 24px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+/* ITEMS */
+.item {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 24px;
+  margin-bottom: 32px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid #eae6e0;
+}
+.item:last-child { border-bottom: none; padding-bottom: 0; margin-bottom: 0; }
+
+@media (max-width: 640px) {
+  .item { grid-template-columns: 1fr; gap: 12px; }
+}
+
+.item-meta {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 13px;
+}
+.item-name {
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 2px;
+  font-size: 14px;
+}
+.item-role {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+.badge {
+  display: inline-block;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: var(--badge-bg);
+  color: var(--muted);
+  padding: 3px 8px;
+  border-radius: 3px;
+  margin-top: 6px;
+}
+
+/* BLOCKQUOTES */
+blockquote {
+  border-left: 3px solid var(--border);
+  padding: 12px 0 12px 20px;
+  font-size: 15.5px;
+  font-style: italic;
+  color: #2c2825;
+  line-height: 1.7;
+}
+
+/* SLACK QUOTES */
+.slack-quote {
+  display: flex;
+  gap: 12px;
+  background: var(--slack-bg);
+  border: 1px solid var(--slack-border);
+  border-radius: 6px;
+  padding: 14px 16px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  margin-bottom: 10px;
+}
+.slack-quote:last-child { margin-bottom: 0; }
+.slack-quote:hover {
+  border-color: #c0bab2;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+.sq-header {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 4px;
+  flex-wrap: wrap;
+}
+.sq-name {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--text);
+}
+.sq-channel {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 11px;
+  color: var(--muted);
+  opacity: 0.8;
+}
+.sq-time {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 11px;
+  color: var(--muted);
+  opacity: 0.6;
+}
+.sq-text {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: #2c2825;
+}
+
+/* FOOTER */
+.page-footer {
+  margin-top: 60px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 11px;
+  color: var(--muted);
+  text-align: center;
+  letter-spacing: 0.04em;
+}
+
+/* PRINT */
+@media print {
+  body { background: white; }
+  .page { padding: 20px 0; }
+  .slack-quote { break-inside: avoid; }
+  .item { break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <header class="page-header">
+    <span>Praise Collection</span>
+    <span>Jul 2025 – May 2026</span>
+  </header>
+
+  <h1>What People Say About<br>Working With Theresa</h1>
+
+  <p class="intro"><strong>Quotes and recognition from peers, leaders, and cross-functional partners at Atlassian.</strong> Sourced from formal Kudos awards, Slack messages, Loom comments, and Confluence feedback.</p>
+
+  <hr class="rule">
+
+  <!-- I. FORMAL KUDOS AWARDS -->
+  <section class="section">
+    <h2 class="section-heading">I. Formal Kudos Awards</h2>
+
+    <div class="item">
+      <div class="item-meta">
+        <div class="item-name">Michelle Mortimer</div>
+        <div class="item-role">Design Manager, C&L<br>July 2025</div>
+        <span class="badge">Big Kudos</span>
+      </div>
+      <div>
+        <blockquote>
+          <p>I've been really impressed with the way you've leant in and got up to speed so quickly in a messy C&L space with lots of ambiguity. In a short time, you're already adding so much value and showing up as a design leader. You're even participating in wider x-functional conversations and thinking of ways we can improve things. Super keen to keep collaborating with you!</p>
+        </blockquote>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-meta">
+        <div class="item-name">Kenya Husband</div>
+        <div class="item-role">Sr. Manager, Community Strategy<br>February 2026</div>
+        <span class="badge">Big Kudos</span>
+      </div>
+      <div>
+        <blockquote>
+          <p>Huge THANK YOU to Theresa for all the hard work and relentless focus to ensure the requested Forums experiments from the business were launched as expected and delivered outcomes that exceeded planned performance goals! Thank you for ensuring the experiments moved forward, pressure-testing each experiment's functionality to ensure it operates as intended, and for being a great partner on this initiative!</p>
+        </blockquote>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-meta">
+        <div class="item-name">Christina Nelson</div>
+        <div class="item-role">Program Manager, Adoption<br>February 2026</div>
+        <span class="badge">Kudos</span>
+      </div>
+      <div>
+        <blockquote>
+          <p>Thank you for your incredible help with the Adoption Hub main page and navigation design! Your attention to detail and collaborative spirit were instrumental in getting us to the finish line of the original scope. I appreciate your dedication and for making such a positive impact on this project — we couldn't have done it without you!</p>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- II. ON DESIGN QUALITY -->
+  <section class="section">
+    <h2 class="section-heading">II. On Design Quality</h2>
+
+    <div class="item">
+      <div class="item-meta">
+        <div class="item-name">Julia Eddington</div>
+        <div class="item-role">Content Strategist<br>September 2025</div>
+      </div>
+      <div>
+        <a class="slack-quote" href="https://atlassian.slack.com/archives/C097BRLQH8C/p1758299280177659" target="_blank" rel="noopener">
+          <div>
+            <div class="sq-header">
+              <span class="sq-name">Julia Eddington</span>
+              <span class="sq-channel">#rovo-adoption-guide</span>
+              <span class="sq-time">Sep 19, 2025</span>
+            </div>
+            <p class="sq-text">Huge props to @Theresa for creating such a gorgeous design, @Michelle for amazing copy, and @Owen for flawless engineering.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-meta">
+        <div class="item-name">Aniket</div>
+        <div class="item-role">Frontend Engineer, Migration<br>March 2026</div>
+      </div>
+      <div>
+        <a class="slack-quote" href="https://atlassian.slack.com/archives/C0A747PJ3N0/p1773672104291889" target="_blank" rel="noopener">
+          <div>
+            <div class="sq-header">
+              <span class="sq-name">Aniket</span>
+              <span class="sq-channel">#hl-migration-internal</span>
+              <span class="sq-time">Mar 16, 2026</span>
+            </div>
+            <p class="sq-text">Thanks @Theresa, the designs for this were just amazing.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-meta">
+        <div class="item-name">Devanshu Arora</div>
+        <div class="item-role">Engineering Lead, Migration<br>April 2026</div>
+      </div>
+      <div>
+        <a class="slack-quote" href="https://atlassian.slack.com/archives/C0A747PJ3N0/p1775744221908759" target="_blank" rel="noopener">
+          <div>
+            <div class="sq-header">
+              <span class="sq-name">Devanshu Arora</span>
+              <span class="sq-channel">#hl-migration-internal</span>
+              <span class="sq-time">Apr 9, 2026</span>
+            </div>
+            <p class="sq-text">@Theresa @Marcus thank you for the awesome designs.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-meta">
+        <div class="item-name">Julia Eddington</div>
+        <div class="item-role">Content Strategist<br>October 2025</div>
+      </div>
+      <div>
+        <a class="slack-quote" href="https://atlassian.slack.com/archives/C097BRLQH8C/p1761754494355819" target="_blank" rel="noopener">
+          <div>
+            <div class="sq-header">
+              <span class="sq-name">Julia Eddington</span>
+              <span class="sq-channel">#rovo-adoption-guide</span>
+              <span class="sq-time">Oct 29, 2025</span>
+            </div>
+            <p class="sq-text">I think the design looks great @Theresa!</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- III. ON LEADERSHIP & COLLABORATION -->
+  <section class="section">
+    <h2 class="section-heading">III. On Leadership & Collaboration</h2>
+
+    <div class="item">
+      <div class="item-meta">
+        <div class="item-name">Travis Bach</div>
+        <div class="item-role">Design Manager<br>May 2026</div>
+      </div>
+      <div>
+        <blockquote>
+          <p>Theresa is wonderful. She is a very talented designer, supportive teammate, and strong cross-craft partner. I've seen multiple discussions where project scope/timelines have pushed towards a poor user experience and Theresa has acted as the voice of the user and steered the team back on track. Theresa is a valued member of the team and her leadership has always ensured Atlassian products are better.</p>
+        </blockquote>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-meta">
+        <div class="item-name">Andrew DeBell</div>
+        <div class="item-role">Sr. Product Manager, Learning<br>October 2025</div>
+      </div>
+      <div>
+        <a class="slack-quote" href="https://atlassian.slack.com/archives/C09DTDZ9J57/p1759511017387399" target="_blank" rel="noopener">
+          <div>
+            <div class="sq-header">
+              <span class="sq-name">Andrew DeBell</span>
+              <span class="sq-time">Oct 3, 2025</span>
+            </div>
+            <p class="sq-text">GREAT JOB TODAY @Marcus and @Theresa!! The fact we finished that meeting early without a bunch of questions/comments/concerns is incredible. Thank you both for all the excellent work.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-meta">
+        <div class="item-name">Andrew DeBell</div>
+        <div class="item-role">Sr. Product Manager, Learning<br>March 2026</div>
+      </div>
+      <div>
+        <a class="slack-quote" href="https://atlassian.slack.com/archives/C0A2G458A72/p1773341417614479" target="_blank" rel="noopener">
+          <div>
+            <div class="sq-header">
+              <span class="sq-name">Andrew DeBell</span>
+              <span class="sq-time">Mar 12, 2026</span>
+            </div>
+            <p class="sq-text">We really do appreciate all the hard work you both put into the ALP designs. We've already had multiple folks internal and external comment positively.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-meta">
+        <div class="item-name">Lindsey Boyd</div>
+        <div class="item-role">Sr. Product Manager, Community<br>March &amp; April 2026</div>
+      </div>
+      <div>
+        <a class="slack-quote" href="https://atlassian.slack.com/archives/C09HJKZ7JQ1/p1775248061585789" target="_blank" rel="noopener">
+          <div>
+            <div class="sq-header">
+              <span class="sq-name">Lindsey Boyd</span>
+              <span class="sq-channel">#project-agora</span>
+              <span class="sq-time">Apr 3, 2026</span>
+            </div>
+            <p class="sq-text">This is awesome @Theresa — super exciting! Great work!</p>
+          </div>
+        </a>
+        <a class="slack-quote" href="https://atlassian.slack.com/archives/C08NXQN3GP5/p1774540047318959" target="_blank" rel="noopener">
+          <div>
+            <div class="sq-header">
+              <span class="sq-name">Lindsey Boyd</span>
+              <span class="sq-channel">#community-product-biz-leads</span>
+              <span class="sq-time">Mar 26, 2026</span>
+            </div>
+            <p class="sq-text">Thanks again to folks that attended our product strategy workshop and @Theresa for leading it!</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-meta">
+        <div class="item-name">Amit Deshpande</div>
+        <div class="item-role">Engineering Lead<br>March 2026</div>
+      </div>
+      <div>
+        <a class="slack-quote" href="https://atlassian.slack.com/archives/C09HJKZ7JQ1/p1773156463113339" target="_blank" rel="noopener">
+          <div>
+            <div class="sq-header">
+              <span class="sq-name">Amit Deshpande</span>
+              <span class="sq-channel">#project-agora</span>
+              <span class="sq-time">Mar 10, 2026</span>
+            </div>
+            <p class="sq-text">@Theresa for the comprehensive notes and the super-clean Kudos screen representation.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-meta">
+        <div class="item-name">Robert Banburski</div>
+        <div class="item-role">Technical Program Manager<br>May 2026</div>
+      </div>
+      <div>
+        <a class="slack-quote" href="https://atlassian.slack.com/archives/C0A747PJ3N0/p1778059759528579" target="_blank" rel="noopener">
+          <div>
+            <div class="sq-header">
+              <span class="sq-name">Robert Banburski</span>
+              <span class="sq-channel">#hl-migration-internal</span>
+              <span class="sq-time">May 6, 2026</span>
+            </div>
+            <p class="sq-text">Sharing is caring… Couple of months ago @Theresa shared a fabulous Loom video in which she explains how to use Figma/DevMode… I believe this will improve comms between DEV and Design team.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- IV. ON INNOVATION & PROTOTYPING -->
+  <section class="section">
+    <h2 class="section-heading">IV. On Innovation & Prototyping</h2>
+
+    <div class="item">
+      <div class="item-meta">
+        <div class="item-name">Lana Montgomery</div>
+        <div class="item-role">Head of Community<br>March 2026</div>
+      </div>
+      <div>
+        <a class="slack-quote" href="https://atlassian.slack.com/archives/C05C9FD1Z6H/p1772679979304429" target="_blank" rel="noopener">
+          <div>
+            <div class="sq-header">
+              <span class="sq-name">Lana Montgomery</span>
+              <span class="sq-channel">#community-and-learning</span>
+              <span class="sq-time">Mar 4, 2026</span>
+            </div>
+            <p class="sq-text">Highlighting some absolutely incredible work that happened as part of AI Builders Week… I'm in awe of what this team were able to create in just a few days — truly awesome.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-meta">
+        <div class="item-name">Lana Montgomery</div>
+        <div class="item-role">Head of Community<br>March 2026 (DM)</div>
+      </div>
+      <div>
+        <blockquote>
+          <p>It's incredible!! Thank you all so much for choosing this for your project and putting so much time and energy into it… where's the best place for me to give you all the kudos and call out how amazing this is?… Thanks so much Theresa!</p>
+        </blockquote>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-meta">
+        <div class="item-name">Shagun Bhatia</div>
+        <div class="item-role">Engineer, Community<br>March 2026</div>
+      </div>
+      <div>
+        <a class="slack-quote" href="https://atlassian.slack.com/archives/C05C9FD1Z6H/p1772731968997379" target="_blank" rel="noopener">
+          <div>
+            <div class="sq-header">
+              <span class="sq-name">Shagun Bhatia</span>
+              <span class="sq-channel">#community-and-learning</span>
+              <span class="sq-time">Mar 5, 2026</span>
+            </div>
+            <p class="sq-text">And shoutout to @Theresa for a spectacular usecase identification and prototype!</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-meta">
+        <div class="item-name">Garrett Marttinen</div>
+        <div class="item-role">Learning Strategist<br>April 2026</div>
+      </div>
+      <div>
+        <a class="slack-quote" href="https://atlassian.slack.com/archives/C0AR9ATC7HB/p1775836159166459" target="_blank" rel="noopener">
+          <div>
+            <div class="sq-header">
+              <span class="sq-name">Garrett Marttinen</span>
+              <span class="sq-channel">#gamification-learning-strategy</span>
+              <span class="sq-time">Apr 10, 2026</span>
+            </div>
+            <p class="sq-text">One of our designers @Theresa has already spent time on the gamification problem! (unbeknownst to me) And her thoughts highly align with us.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- V. FROM TEAMMATES & MENTEES -->
+  <section class="section">
+    <h2 class="section-heading">V. From Teammates & Mentees</h2>
+
+    <div class="item">
+      <div class="item-meta">
+        <div class="item-name">Marcus Hultqvist</div>
+        <div class="item-role">Product Designer, C&L<br>February 2026</div>
+      </div>
+      <div>
+        <a class="slack-quote" href="https://atlassian.slack.com/archives/D09424G7N4R/p1771877202061349" target="_blank" rel="noopener">
+          <div>
+            <div class="sq-header">
+              <span class="sq-name">Marcus Hultqvist</span>
+              <span class="sq-time">Feb 23, 2026</span>
+            </div>
+            <p class="sq-text">This made me a little teary, I'm extremely grateful that I get to work with you too Theresa, we make a kickass team… and I really appreciate you framing my 'yes' attribute as positive because I'm not always sure how the other designers think of me doing that all the time.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-meta">
+        <div class="item-name">Kenya Husband</div>
+        <div class="item-role">Sr. Manager, Community Strategy<br>February 2026</div>
+      </div>
+      <div>
+        <a class="slack-quote" href="https://atlassian.slack.com/archives/D094SP2FVAA/p1771955636248789" target="_blank" rel="noopener">
+          <div>
+            <div class="sq-header">
+              <span class="sq-name">Kenya Husband</span>
+              <span class="sq-time">Feb 24, 2026</span>
+            </div>
+            <p class="sq-text">Hey @Theresa really have appreciated your work with us on the experiments!</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-meta">
+        <div class="item-name">Edmund</div>
+        <div class="item-role">Mentors Without Borders<br>October 2025</div>
+      </div>
+      <div>
+        <a class="slack-quote" href="https://atlassian.slack.com/archives/D094GB3GFTK/p1761664569790109" target="_blank" rel="noopener">
+          <div>
+            <div class="sq-header">
+              <span class="sq-name">Edmund</span>
+              <span class="sq-time">Oct 28, 2025</span>
+            </div>
+            <p class="sq-text">I really appreciate the sessions you're doing with Wonder, your time and support already make a big difference.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-meta">
+        <div class="item-name">Brad Mueller</div>
+        <div class="item-role">Colleague<br>February 2026</div>
+      </div>
+      <div>
+        <a class="slack-quote" href="https://atlassian.slack.com/archives/C05RD29HPBQ/p1770655273963239" target="_blank" rel="noopener">
+          <div>
+            <div class="sq-header">
+              <span class="sq-name">Brad Mueller</span>
+              <span class="sq-channel">#cal-pals</span>
+              <span class="sq-time">Feb 9, 2026</span>
+            </div>
+            <p class="sq-text">WOW! That is super impressive, especially considering he had never heard of Figma 5 months ago. That's some great mentoring, @Theresa!</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- VI. TEAM & CROSS-FUNCTIONAL -->
+  <section class="section">
+    <h2 class="section-heading">VI. Team & Cross-Functional Recognition</h2>
+
+    <div class="item">
+      <div class="item-meta">
+        <div class="item-name">Michelle Mortimer</div>
+        <div class="item-role">Design Manager<br>Multiple dates</div>
+      </div>
+      <div>
+        <a class="slack-quote" href="https://atlassian.slack.com/archives/C05C9FD1Z6H/p1773186306121929" target="_blank" rel="noopener">
+          <div>
+            <div class="sq-header">
+              <span class="sq-name">Michelle Mortimer</span>
+              <span class="sq-channel">#community-and-learning</span>
+              <span class="sq-time">Mar 10, 2026</span>
+            </div>
+            <p class="sq-text">Wow, amazing news! Huge congrats to the whole team! Shoutout to @Theresa @Marcus and @Gillian for the design side of things!</p>
+          </div>
+        </a>
+        <a class="slack-quote" href="https://atlassian.slack.com/archives/C067Y299ULC/p1771975512963749" target="_blank" rel="noopener">
+          <div>
+            <div class="sq-header">
+              <span class="sq-name">Michelle Mortimer</span>
+              <span class="sq-channel">#lifecycle-and-advocacy-design</span>
+              <span class="sq-time">Feb 24, 2026</span>
+            </div>
+            <p class="sq-text">@Theresa and @Gillian for sharing at crit, and all the detailed work you're doing!</p>
+          </div>
+        </a>
+        <a class="slack-quote" href="https://atlassian.slack.com/archives/C067Y299ULC/p1761778847332049" target="_blank" rel="noopener">
+          <div>
+            <div class="sq-header">
+              <span class="sq-name">Michelle Mortimer</span>
+              <span class="sq-channel">#lifecycle-and-advocacy-design</span>
+              <span class="sq-time">Oct 29, 2025</span>
+            </div>
+            <p class="sq-text">@Marcus @Theresa great work on your first Regional Design Review!</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-meta">
+        <div class="item-name">Tiffany Scolnic</div>
+        <div class="item-role">TPM, Community<br>February 2026</div>
+      </div>
+      <div>
+        <a class="slack-quote" href="https://atlassian.slack.com/archives/C05EGTDPTFV/p1770396825786509" target="_blank" rel="noopener">
+          <div>
+            <div class="sq-header">
+              <span class="sq-name">Tiffany Scolnic</span>
+              <span class="sq-channel">#community-learning-x-product</span>
+              <span class="sq-time">Feb 6, 2026</span>
+            </div>
+            <p class="sq-text">Shoutout to @Lindsey @Theresa @Michelle @Valeriia and @Anil for all your support and guidance with this project — the real MVPs.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-meta">
+        <div class="item-name">Confluence Karma</div>
+        <div class="item-role">Community blog post<br>November 2025</div>
+      </div>
+      <div>
+        <blockquote>
+          <p>Wonderful write up @Theresa Garritano — You really captured the essence of the offsite. Excited for what the team will build and create.</p>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <footer class="page-footer">
+    Theresa Garritano · Product Design Lead · Atlassian
+  </footer>
+
+</div>
+
+</body>
+</html>
